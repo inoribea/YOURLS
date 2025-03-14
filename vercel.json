@@ -2,27 +2,21 @@
     "version": 2,
     "builds": [
       {
-      "src": "admin/index.php", 
-      "use": "@vercel/node",    
-      "config": {
-        "runtime": "php"        
-      } 
-    },
-    {
-        "src": "./build.sh",  
+        "src": "admin/index.php",
+        "use": "@vercel/php"
+      },
+      {
+        "src": "user/index.html",
         "use": "@vercel/static"
-    } 
+      },
+      {
+        "src": "build.sh",
+        "use": "@vercel/static"
+      }
     ],
     "routes": [
-      {
-        "src": "/user/(.*)",       
-        "dest": "user/index.html"  
-      },
-      
-      {
-        "src": "/admin/(.*)",      
-        "dest": "admin/index.php" 
-      } 
+      {"src": "/admin/?(.*)", "dest": "admin/index.php"},
+      {"src": "/user/(.*)", "dest": "user/index.html"}
     ]
   }
   
