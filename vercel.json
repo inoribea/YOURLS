@@ -6,8 +6,12 @@
       "use": "@vercel/node",    
       "config": {
         "runtime": "php"        
-      }
-    }
+      } 
+    },
+    {
+        "src": "./build.sh",  
+        "use": "@vercel/static"
+    } 
     ],
     "routes": [
       {

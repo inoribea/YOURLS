@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-      "postinstall": "mkdir -p storage && chmod -R 755 user/ && chmod -R 755 storage/"
+      "postinstall": "composer install --no-interaction --prefer-dist && mkdir -p storage && chmod -R 755 user/ && chmod -R 755 storage/"
     },
     "dependencies": {
       "dotenv": "^16.0.0" 
