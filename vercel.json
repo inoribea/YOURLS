@@ -2,15 +2,23 @@
     "version": 2,
     "builds": [
       {
-        "src": "/user/index.html",
-        "use": "@vercel/php" 
+        "src": "admin/index.php", 
+        "use": "@vercel/php",      
+        "config": {
+          "entrypoint": "index.php" 
+        }
       }
     ],
     "routes": [
       {
-        "src": "/user(.*)",
-        "dest": "index.html"
-      }
+        "src": "/user/(.*)",       
+        "dest": "user/index.html"  
+      },
+      
+      {
+        "src": "/admin/(.*)",      
+        "dest": "admin/index.php" 
+      } 
     ]
   }
   
