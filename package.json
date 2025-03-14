@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "scripts": {
+      "postinstall": "chmod -R 755 user/ && chmod -R 755 storage/"
+    },
+    "dependencies": {
+      "dotenv": "^16.0.0" 
+    }
+  }
+  
