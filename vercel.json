@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
       {
-        "src": "admin/index.php", 
-        "use": "@vercel/php",      
-        "config": {
-          "entrypoint": "index.php" 
-        }
+      "src": "admin/index.php", 
+      "use": "@vercel/node",    
+      "config": {
+        "runtime": "php"        
       }
+    }
     ],
     "routes": [
       {
