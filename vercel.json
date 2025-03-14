@@ -1,19 +1,14 @@
+
 {
-    "version": 2,
     "builds": [
       {
         "src": "admin/index.php",
-        "use": "@vercel/php"
-      },
-      {
-        "src": "user/index.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "build.sh",
-        "use": "@vercel/static"
+        "use": "@vercel/node",
+        "config": {
+          "runtime": "nodejs18.x"
+        }
       }
-    ],
+    ], 
     "routes": [
       {"src": "/admin/?(.*)", "dest": "admin/index.php"},
       {"src": "/user/(.*)", "dest": "user/index.html"}
